@@ -11,10 +11,10 @@ def dashboard():
     st.markdown("<p style='text-align: center; font-size: 18px;'>Thank you for using this application! 🙏</p>", unsafe_allow_html=True)
     st.markdown("""
     <p style='text-align: center; color: gray;'>
-        Note: This app is for personnel purposes only and does not advertisement any videos.
+        Note: This app is only for personnel purpose.
     </p>
     """, unsafe_allow_html=True)
 
-    st.markdown("""<p style='text-align: center;'>Made with ❤️ by Avdhesh Varshney</p>""", unsafe_allow_html=True)
+    st.markdown("""<p style='text-align: center;'>Made with ❤️ by [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)</p>""", unsafe_allow_html=True)
 
 dashboard()
