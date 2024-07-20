@@ -3,7 +3,7 @@ from src.utils.animatedText import animatedText
 
 def dashboard():
     st.set_page_config(page_title="My Gullak", page_icon="🌍")
-    st.markdown(f"<h1 style='text-align: center;'>{animatedText('Welcome to the \'My Gullak\' Application! 🌈')}</h1>", unsafe_allow_html=True)
+    st.markdown(f'''<h1 style='text-align: center;'>{animatedText("Welcome to the 'My Gullak' Application! 🌈")}</h1>''', unsafe_allow_html=True)
 
     st.markdown("""
     <hr />
