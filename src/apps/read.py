@@ -46,7 +46,7 @@ def showFiles(service, files):
 
 def main():
     st.set_page_config(page_title="My Gullak: File Reading Portal", page_icon="☁️")
-    st.markdown(f"<h1 style='text-align: center;'>{animatedText('My Gullak: File Reading Portal 🌈')}</h1>", unsafe_allow_html=True)
+    st.markdown(f'''<h1 style='text-align: center;'>{animatedText("My Gullak: File Reading Portal 🌈")}</h1>''', unsafe_allow_html=True)
 
     service = st.session_state.authenticate
     current_folder_id = st.session_state.folder_trackback[-1]

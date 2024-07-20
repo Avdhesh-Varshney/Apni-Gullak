@@ -39,7 +39,7 @@ def main():
 
     directory_path = getDirectoryPath(data)
     if directory_path:
-        st.markdown(f"<h5 style='text-align: center;'>Selected Directory Path: {animatedText(f"{' > '.join(directory_path)}")}</h5>", unsafe_allow_html=True)
+        st.markdown(f'''<h5 style='text-align: center;'>Selected Directory Path: {animatedText(f"{' > '.join(directory_path)}")}</h5>''', unsafe_allow_html=True)
         upload(directory_path)
     else:
         st.warning("Please select all the categories to upload the file. 📁", icon="⚠️")
