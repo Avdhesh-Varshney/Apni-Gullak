@@ -1,13 +1,25 @@
 import streamlit as st
+import requests
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 # Load the general settings from secrets
 SCOPES = st.secrets["general"]["SCOPES"]
-SERVICE_ACCOUNT_FILE = st.secrets["general"]["SERVICE_ACCOUNT_FILE"]
+SERVICE_ACCOUNT_FILE_URL = st.secrets["general"]["SERVICE_ACCOUNT_FILE"]
+
+def downloadFile(file_url):
+    file_id = file_url.split('/')[-2]
+    download_url = f'https://drive.google.com/uc?id={file_id}'
+    
+    response = requests.get(download_url)
+    response.raise_for_status()
+    
+    with open('universal-ion-430004-j8-6c20be48b0ab.json', 'wb') as f:
+        f.write(response.content)
 
 def authenticate():
-    credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    downloadFile(SERVICE_ACCOUNT_FILE_URL)
+    credentials = service_account.Credentials.from_service_account_file('universal-ion-430004-j8-6c20be48b0ab.json', scopes=SCOPES)
     return build('drive', 'v3', credentials=credentials)
 
 if "logged_in" not in st.session_state:

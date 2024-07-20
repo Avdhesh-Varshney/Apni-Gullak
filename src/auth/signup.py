@@ -3,6 +3,9 @@ import os
 from database.encrypt import secure_password
 from database.sql import valid_email, valid_username, create_connection, create_usertable, add_userdata, check_user
 
+ADMIN_KEY = st.secrets["general"]["ADMIN_KEY"]
+SUPER_ADMIN_KEY = st.secrets["general"]["SUPER_ADMIN_KEY"]
+
 def signup():
   st.title("🔐 Signup Form")
   st.subheader("Create a New Account")
@@ -34,19 +37,15 @@ def signup():
   with col4:
       new_repeat_password = st.text_input('🔑 Re-type your password:', type='password')
 
-  # Handle Role-Based Key Inputs
-  admin_key = os.environ.get("ADMIN_KEY")
-  super_admin_key = os.environ.get("SUPER_ADMIN_KEY")
-
   if new_roles == 'Admin':
       pass_key = st.text_input('🔑 Enter your Admin key:')
-      if pass_key != admin_key:
+      if pass_key != ADMIN_KEY:
           st.warning("Invalid admin key!", icon="⚠️")
           return
 
   if new_roles == 'Super Admin':
       pass_key = st.text_input('🔑 Enter your Super admin key:')
-      if pass_key != super_admin_key:
+      if pass_key != SUPER_ADMIN_KEY:
           st.warning("Invalid super admin key!", icon="⚠️")
           return
 
