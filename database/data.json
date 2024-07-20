@@ -1,0 +1,25 @@
+{
+  "Images": {
+    "Personnel": {
+      "Hariom": {},
+      "Neetu": {},
+      "Avdhesh": {},
+      "Harshit": {},
+      "Aradhya": {}
+    },
+    "Family": {},
+    "Others": {}
+  },
+  "Documents": {
+    "Electricity": {},
+    "LIC": {
+      "Hariom": {},
+      "Neetu": {},
+      "Avdhesh": {},
+      "Harshit": {},
+      "Aradhya": {}
+    },
+    "Recharge": {},
+    "Others": {}
+  }
+}
