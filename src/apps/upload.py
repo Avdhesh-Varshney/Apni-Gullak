@@ -34,7 +34,7 @@ def getDirectoryPath(data):
 
 def main():
     st.set_page_config(page_title="My Gullak: File Upload Portal", page_icon="☁️")
-    st.markdown(f"<h1 style='text-align: center;'>{animatedText("My Gullak: File Upload Portal 🌈")}</h1>", unsafe_allow_html=True)
+    st.markdown(f'''<h1 style='text-align: center;'>{animatedText("My Gullak: File Upload Portal 🌈")}</h1>''', unsafe_allow_html=True)
     data = loadData()
 
     directory_path = getDirectoryPath(data)
