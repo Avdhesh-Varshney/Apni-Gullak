@@ -5,7 +5,8 @@
       "Neetu": {},
       "Avdhesh": {},
       "Harshit": {},
-      "Aradhya": {}
+      "Aradhya": {},
+      "Others": {}
     },
     "Family": {},
     "Others": {}
@@ -17,9 +18,38 @@
       "Neetu": {},
       "Avdhesh": {},
       "Harshit": {},
-      "Aradhya": {}
+      "Aradhya": {},
+      "Others": {}
     },
     "Recharge": {},
+    "School-College": {
+      "Certificates": {
+        "Hariom": {},
+        "Neetu": {},
+        "Avdhesh": {},
+        "Harshit": {},
+        "Aradhya": {}
+      },
+      "Fees": {
+        "Avdhesh": {
+          "Receipts": {},
+          "Hostel": {}
+        },
+        "Harshit": {
+          "Receipts": {},
+          "Hostel": {}
+        },
+        "Aradhya": {
+          "Receipts": {}
+        }
+      },
+      "Others": {}
+    },
+    "Bank": {},
+    "Others": {}
+  },
+  "Others": {
+    "Scholarship": {},
     "Others": {}
   }
 }
